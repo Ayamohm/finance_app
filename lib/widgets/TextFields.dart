@@ -6,10 +6,12 @@ class TextfieldsWidget extends StatelessWidget {
     final String? labelText;
     final Widget? suffixIcon;
     final bool? ispassword;
+    final Controller;
+    final Validator;
   const TextfieldsWidget({
     super.key,
     this.labelText,
-    this.suffixIcon, this.ispassword
+    this.suffixIcon, this.ispassword, this.Validator, this.Controller
   });
 
   @override
@@ -17,7 +19,9 @@ class TextfieldsWidget extends StatelessWidget {
     return Container(
       width: 331.w,
       height: 56.h,
-      child: TextField(
+      child: TextFormField(
+        controller:Controller,
+        validator: Validator,
         cursorColor: AppColors.textfieldTextColor,
         obscureText: ispassword?? false,
         decoration: InputDecoration(

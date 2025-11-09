@@ -19,9 +19,9 @@ class RouteGenerationConfig{
         builder: (context, state) => Loginscreen(),
       ),
       GoRoute(
-        path: AppRoutes.RegisterScreen,
-        name: AppRoutes.RegisterScreen,
-        builder: (context, state) => Registerscreen(),
+        path: AppRoutes.ForgetPass,
+        name: AppRoutes.ForgetPass,
+        builder: (context, state) => ForgetPass(),
       ),
     ]
   );
